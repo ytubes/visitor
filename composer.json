@@ -1,0 +1,15 @@
+{
+    "name": "ytubes/visitor",
+    "description": "Base extension",
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "yiisoft/yii2": "~2.0.9",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "jaybizzle/crawler-detect": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Module\\Visitor\\": "./src"
+        }
+    }
+}
