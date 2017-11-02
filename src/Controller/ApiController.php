@@ -1,19 +1,16 @@
 <?php
-namespace Module\Visitor\Controller;
+namespace RS\Visitor\Controller;
 
 use Yii;
-use yii\base\Module;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\web\Request;
 use yii\web\Response;
-use yii\web\Session;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\filters\ContentNegotiator;
 
-use Module\Visitor\Traits\ContainerAwareTrait;
-use Module\Visitor\Report\SummaryReport;
+use RS\Visitor\Traits\ContainerAwareTrait;
+use RS\Visitor\Report\SummaryReport;
 
 /**
  * SitesController implements the CRUD actions for Site model.
@@ -62,7 +59,7 @@ class ApiController extends Controller
     {
         $reportBuilder = new SummaryReport;
 
-        $reportBuilder->on(SummaryReport::EVENT_BEFORE_BUILD, [\Module\Visitor\Event\ReportEvent::class, 'deleteVisitsOverhead']);
+        $reportBuilder->on(SummaryReport::EVENT_BEFORE_BUILD, [\RS\Visitor\Event\ReportEvent::class, 'deleteVisitsOverhead']);
 
         $report = $reportBuilder->build();
 

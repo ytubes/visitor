@@ -1,10 +1,10 @@
 <?php
-namespace Module\Visitor\Cron\Job;
+namespace RS\Visitor\Cron\Job;
 
 use Yii;
 use yii\base\Event;
-use Module\Visitor\Cron\CronJobInterface;
-use Module\Visitor\Model\Visitor;
+use RS\Visitor\Cron\CronJobInterface;
+use RS\Visitor\Model\Visitor;
 
 /**
  * Очищение статы пользователей более чем за сутки

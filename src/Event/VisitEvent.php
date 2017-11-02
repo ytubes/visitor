@@ -1,10 +1,10 @@
 <?php
-namespace Module\Visitor\Event;
+namespace RS\Visitor\Event;
 
 use Yii;
 
-use Module\Visitor\Tracker\Visit;
-use Module\Visitor\Model\Visitor;
+use RS\Visitor\Tracker\Visit;
+use RS\Visitor\Model\Visitor;
 
 class VisitEvent
 {

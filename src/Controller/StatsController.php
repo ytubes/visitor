@@ -1,47 +1,22 @@
 <?php
-namespace Module\Visitor\Controller;
+namespace RS\Visitor\Controller;
 
 use Yii;
 use yii\base\Module;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\web\Request;
-use yii\web\Response;
-use yii\web\Session;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\data\ActiveDataProvider;
 
-use Module\Visitor\Model\Visitor;
-use Module\Visitor\Report\SummaryReport;
-use Module\Visitor\Traits\ContainerAwareTrait;
+use RS\Visitor\Model\Visitor;
+use RS\Visitor\Report\SummaryReport;
+use RS\Visitor\Traits\ContainerAwareTrait;
 
 class StatsController extends Controller
 {
     use ContainerAwareTrait;
 
-    protected $request;
-    protected $response;
-    protected $session;
-
-    /**
-     * MassActionsController constructor.
-     *
-     * @param string    $id
-     * @param Module    $module
-     * @param Request   $request
-     * @param Response  $response
-     * @param Session   $session
-     * @param array     $config
-     */
-    public function __construct($id, Module $module, Request $request, Response $response, Session $session, array $config = [])
-    {
-        $this->request = $request;
-        $this->response = $response;
-        $this->session = $session;
-
-        parent::__construct($id, $module, $config);
-    }
     /**
      * @inheritdoc
      */
@@ -70,7 +45,7 @@ class StatsController extends Controller
     {
         $reportBuilder = new SummaryReport;
 
-        $reportBuilder->on(SummaryReport::EVENT_BEFORE_BUILD, [\Module\Visitor\Event\ReportEvent::class, 'deleteVisitsOverhead']);
+        $reportBuilder->on(SummaryReport::EVENT_BEFORE_BUILD, [\RS\Visitor\Event\ReportEvent::class, 'deleteVisitsOverhead']);
 
         $report = $reportBuilder->build();
 

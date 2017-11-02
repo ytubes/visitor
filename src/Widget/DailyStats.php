@@ -1,17 +1,17 @@
 <?php
-namespace Module\Visitor\Widget;
+namespace RS\Visitor\Widget;
 
 use Yii;
 use yii\base\Widget;
 
-use Module\Visitor\Report\SummaryReport;
+use RS\Visitor\Report\SummaryReport;
 /**
  * Class Menu
- * @package Module\Visitor\Widget\DailyStats
+ * @package RS\Visitor\Widget\DailyStats
  */
 class DailyStats extends Widget
 {
-    public $template = '@Module/Visitor/Resources/views/widgets/dailyStats';
+    public $template = '@RS/Visitor/Resources/views/widgets/dailyStats';
 
     /**
      * @inheritdoc

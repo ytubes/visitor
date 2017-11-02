@@ -1,5 +1,5 @@
 <?php
-namespace Module\Visitor\Traits;
+namespace RS\Visitor\Traits;
 
 use Yii;
 use yii\di\Container;

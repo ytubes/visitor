@@ -1,9 +1,9 @@
 <?php
-namespace Module\Visitor\Report;
+namespace RS\Visitor\Report;
 
 use Yii;
 use yii\base\Component;
-use Module\Visitor\Model\Visitor;
+use RS\Visitor\Model\Visitor;
 
 /**
  * Visitor stats builder
@@ -14,7 +14,7 @@ class SummaryReport extends Component
 	const EVENT_AFTER_BUILD = 'afterBuild';
 
 	/**
-	 * @var string таблица с визиторами \Module\Visitor\Model\Visitor
+	 * @var string таблица с визиторами \RS\Visitor\Model\Visitor
 	 */
 	private $tableName;
 	/**

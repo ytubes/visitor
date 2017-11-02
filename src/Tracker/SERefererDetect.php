@@ -1,5 +1,5 @@
 <?php
-namespace Module\Visitor\Tracker;
+namespace RS\Visitor\Tracker;
 
 
 class SERefererDetect

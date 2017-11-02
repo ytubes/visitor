@@ -1,5 +1,5 @@
 <?php
-namespace Module\Visitor\Cron;
+namespace RS\Visitor\Cron;
 
 interface CronJobInterface
 {

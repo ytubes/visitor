@@ -1,9 +1,9 @@
 <?php
-namespace Module\Visitor\Event;
+namespace RS\Visitor\Event;
 
 use Yii;
 use yii\db\Query;
-use Module\Visitor\Model\Visitor;
+use RS\Visitor\Model\Visitor;
 
 class ReportEvent
 {

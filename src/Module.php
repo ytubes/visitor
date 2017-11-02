@@ -1,5 +1,5 @@
 <?php
-namespace Module\Visitor;
+namespace RS\Visitor;
 
 use yii\base\Module as BaseModule;
 /**
@@ -15,7 +15,7 @@ class Module extends BaseModule
     /**
      * @var string
      */
-    public $viewPath = '@Module/Visitor/Resources/views';
+    public $viewPath = '@RS/Visitor/Resources/views';
     /**
      * @inheritdoc
      */

@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Module\\Visitor\\": "./src"
+            "RS\\Visitor\\": "./src"
         }
     }
 }

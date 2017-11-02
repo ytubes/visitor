@@ -1,5 +1,5 @@
 <?php
-namespace Module\Visitor\Model;
+namespace RS\Visitor\Model;
 
 use Yii;
 use yii\db\ActiveRecord;

@@ -1,5 +1,5 @@
 <?php
-namespace Module\Visitor;
+namespace RS\Visitor;
 
 use Yii;
 use yii\base\Application;
@@ -9,7 +9,7 @@ use yii\i18n\PhpMessageSource;
 use yii\console\Application as ConsoleApplication;
 use yii\web\Application as WebApplication;
 
-use Module\Visitor\Event\VisitEvent;
+use RS\Visitor\Event\VisitEvent;
 
 class Bootstrap implements BootstrapInterface
 {
@@ -19,7 +19,7 @@ class Bootstrap implements BootstrapInterface
     public function bootstrap($app)
     {
         if ($app->hasModule('visitor') && $app->getModule('visitor') instanceof Module) {
-            Yii::setAlias('@Module/Visitor', __DIR__);
+            Yii::setAlias('@RS/Visitor', __DIR__);
 
             $this->initContainer($app);
             $this->initTranslations($app);
@@ -46,8 +46,8 @@ class Bootstrap implements BootstrapInterface
      */
     protected function initControllerNamespace(WebApplication $app)
     {
-        $app->getModule('visitor')->controllerNamespace = 'Module\Visitor\Controller';
-        $app->getModule('visitor')->setViewPath('@Module/Visitor/Resources/views');
+        $app->getModule('visitor')->controllerNamespace = 'RS\Visitor\Controller';
+        $app->getModule('visitor')->setViewPath('@RS/Visitor/Resources/views');
     }
     /**
      * Registers console commands to main app.
@@ -56,7 +56,7 @@ class Bootstrap implements BootstrapInterface
      */
     protected function initConsoleCommands(ConsoleApplication $app)
     {
-        $app->getModule('visitor')->controllerNamespace = 'Module\Visitor\Command';
+        $app->getModule('visitor')->controllerNamespace = 'RS\Visitor\Command';
     }
     /**
      * Registers module translation messages.
