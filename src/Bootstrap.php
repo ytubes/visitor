@@ -83,8 +83,8 @@ class Bootstrap implements BootstrapInterface
         $app->getUrlManager()->addRules([
             [
                 'class' => \yii\web\UrlRule::class,
-                'pattern' => '/api/visitor/<action:[\w\-]+>',
-                'route' => '/visitor/api/<action>',
+                'pattern' => '/api/stats/visits',
+                'route' => '/visitor/api/index',
             ],
         ], false);
     }
